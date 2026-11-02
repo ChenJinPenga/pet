@@ -1,0 +1,54 @@
+// 小猫种类。素材只认 pet/kitten-animation/webm/，不回落官方形象。
+// 坐着 / 趴着 / 玩耍来自 D:\image 的绿幕视频，已逐帧抠透明。
+{
+  "whisperPrompt": "你是主人桌面上的小猫肉段，会时不时碎碎念一句。说话短短一句（20字以内），软、懒、偶尔傲娇，说人话不啰嗦，不要解释你自己，不要提你是AI。",
+  "notificationsEnabled": false,
+  "whisperImageEnabled": false,
+  "chatImageEnabled": false,
+  "chatImageLimit": 0,
+  "chatMemoryRounds": 5,
+  "confineToScreen": false,
+  "eventsRefreshSec": { "balance": 1800, "whisper": 300 },
+  "physics": {
+    "gravity": 1400,
+    "restitution": 0.78,
+    "groundFriction": 2.5,
+    "ceilingBounce": true,
+    "throwPower": 1.0,
+    "petCollision": false
+  },
+  "font": { "family": "system", "size": 21, "followPet": true },
+  "memes": {},
+  "pets": [
+    {
+      "name": "肉段",
+      "id": "kitten",
+      "size": 462,
+      "balanceEnabled": true,
+      "whisperEnabled": true,
+      "workStatusEnabled": false,
+      "fixedEnabled": true,
+      "display": "both",
+      "position": { "corner": "top-right", "marginX": 24, "marginY": 100 }
+    }
+  ],
+  "animations": {
+    "idle": ["坐着"],
+    "turn": [],
+    "drag": ["趴着"],
+    "clicks": ["玩耍"],
+    "moves": {
+      "default": { "minDist": 80, "maxDist": 220, "margin": 20, "leadSec": 0.15, "tailSec": 0.2 },
+      "actions": []
+    },
+    "categories": [
+      { "id": "休息", "weight": 30, "actions": ["趴着"] }
+    ],
+    "events": {
+      "balance": ["坐着", "坐着", "趴着", "趴着", "玩耍", "玩耍"],
+      "whisper": ["坐着"],
+      "workStatus": ["坐着", "玩耍", "坐着", "趴着", "玩耍", "趴着"]
+    }
+  },
+  "animationWeights": { "idle": 70, "turn": 0, "move": 0 }
+}

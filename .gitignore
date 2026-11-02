@@ -1,0 +1,13 @@
+# 下载来的运行环境和模型，不进仓库。Electron 由 ensure-electron 重新下载。
+dist/**/electron.exe
+dist/**/*.dll
+dist/**/*.pak
+dist/**/*.bin
+dist/**/*.dat
+dist/locales/
+dist/**/resources/
+tools/ffmpeg-dl/
+tools/u2net/
+tools/kitten-frames/
+*.onnx
+*.gz
