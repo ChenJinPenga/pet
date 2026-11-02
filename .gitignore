@@ -1,13 +1,13 @@
-# 下载来的运行环境和模型，不进仓库。Electron 由 ensure-electron 重新下载。
-dist/**/electron.exe
+# 下载来的运行环境。electron.exe、ffmpeg.exe、u2net.onnx 走 Git LFS。
 dist/**/*.dll
 dist/**/*.pak
 dist/**/*.bin
 dist/**/*.dat
 dist/locales/
 dist/**/resources/
-tools/ffmpeg-dl/
-tools/u2net/
+tools/ffmpeg-dl/*
+!tools/ffmpeg-dl/ffmpeg.exe
+tools/u2net/*
+!tools/u2net/u2net.onnx
 tools/kitten-frames/
-*.onnx
 *.gz
